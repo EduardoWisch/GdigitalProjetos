@@ -1,0 +1,139 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 0 0;
+}
+ 
+header {
+    background: linear-gradient(90deg, blueviolet, rgb(174, 119, 224));
+    height: 100vh;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logo {
+    position: absolute;
+    height: 140px;
+    top: 0px;
+    left: 40px;
+}
+
+.texts {
+    display: block;
+}
+
+.texts h1 {
+    font-size: 90px;
+    font-weight: 900;
+}
+
+.texts h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.computer {
+    height: 700px;
+    width: 700px;
+}
+
+main {
+    background-color: blueviolet;
+    display: grid;
+    justify-items: center;
+    gap: 100px;
+    padding: 100px;
+}
+
+main h2 {
+    color: white;
+    font-size: 50px;
+}
+
+.cards{
+   display: flex;
+   gap: 80px;
+}
+
+.card{
+    background-color: white;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    border-radius: 0 50px;
+    line-height: 1.5;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 0 50px 0 0;
+}
+
+.card h4 {
+    margin: 15px 0
+}
+
+main button {
+    background-color: rgb(96, 0, 187);
+    border: none;
+    font-size: 18px;
+    padding: 18px 30px;
+    border-radius: 50px;
+    transition: 3s;
+    cursor: pointer;
+}
+
+main button:hover {
+    background-color: rgba(55, 3, 103, 0.996);
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+@media (max-width: 800px){
+    header {
+        background: linear-gradient(0deg, blueviolet, rgb(174, 119, 224));
+        display: block;
+    }
+    .logo{
+        top: -20px;
+        left: 5%;
+    }
+    .texts {
+        padding: 0 30px;
+        padding-top: 80px;
+    }
+    .texts h1 {
+        font-size: 48px;
+    }
+    .texts h2 {
+        font-size: 36px;
+    }
+    .computer {
+        width: 300px;
+        height: 300px;
+        padding: 30px;
+    }
+    main {
+        display: grid;
+        justify-items: left;
+        padding: 0 30px;
+        gap: 30px;
+    }
+    main h2 {
+        font-size: 32px;
+    }
+    .cards {
+        display: grid;
+        gap: 20px;
+    }
+    main button {
+        margin-bottom: 20px;
+    }
+}

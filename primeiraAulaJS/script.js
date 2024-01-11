@@ -26,9 +26,13 @@
         //     console.log("console 2");
         // }
 
-        let firstArray = ['Azul', 'Vermelho', 'Verde']
-        console.log(firstArray);
-        console.log(firstArray[0]);
-        console.log(firstArray[1]);
-        console.log(firstArray[2]);
-        console.log(firstArray.length);
+        // let firstArray = ['Azul', 'Vermelho', 'Verde']
+        // console.log(firstArray);
+        // console.log(firstArray[0]);
+        // console.log(firstArray[1]);
+        // console.log(firstArray[2]);
+        // console.log(firstArray.length);
+
+        // Exercício
+        let nome = "Eduardo"
+        console.log(nome)

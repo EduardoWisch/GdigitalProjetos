@@ -34,5 +34,7 @@
         // console.log(firstArray.length);
 
         // Exercício
-        let nome = "Eduardo"
-        console.log(nome)
+        let name = "Eduardo"
+        console.log(name)
+        let name2 = name
+        console.log(name2)

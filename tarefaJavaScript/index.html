@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa de JavaScript</title>
+    <style>
+        body {
+            background-color: burlywood;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        button {
+            width: 200px;
+            height: 70px;
+        }
+
+        .div {
+            text-align: center;
+        }
+        .numeroAleatorio{
+            visibility: hidden;
+        }
+        #numeroAleatorio{
+            font-size: 30px;
+            line-height: 2em;
+            color: blueviolet;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <button onclick="tabuada()">Tabuada</button>
+        <div id="tabuada">
+        </div>
+    </div>
+    <div class="div">
+        <button onclick="fatorial()">Fatorial</button>
+        <div id="fatorial">
+        </div>
+    </div>
+    <div class="div">
+        <button onclick="aleatorio()">Adivinhe o número</button>
+        <div id="numeroAleatorio" class="numeroAleatorio">
+            <p>P<br>A<br>R<br>A<br>B<br>É<br>N<br>S</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

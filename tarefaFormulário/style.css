@@ -1,114 +1,104 @@
-* {
+*{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;   
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: white;
 }
 
 body {
+    /* background-color: blueviolet; */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #60038b , #b7119c, #d8496f, #ee9238);
+}
+
+p{
+    color: red;
+}
+
+h1, span {
+    font-size: 60px;
+}
+
+span{
+    color: purple;
+}
+
+.container-cadastro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 50px;
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid black;
+    background-color: white;
     background-color: black;
 }
 
-h1, h2, h3, p {
-    color: white;
+
+.container-cadastro__principal{
+    padding: 10px 10%;
 }
 
-.container__formulario {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.container-cadastro__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.capa__formulario {
-    background-image: url(https://blogs.correio24h.com.br/mesalte/wp-content/uploads/2018/12/jao.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 10px;
-    border-radius: 10px;
+.container-cadastro__logo img {
+    width: 100px;
+    height: 100px;
+    transform: rotate(40deg);
 }
 
-.capa2__formulario {
-    background-image: url(https://veja.abril.com.br/wp-content/uploads/2022/06/jao-fotos-rafaelstrabelli-239-copiar.png?w=1280&h=720&crop=1);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.formulario {
-    min-width: 700px;
-    margin: 0 auto;
-}
-
-.formulario form {
-    width: 60%;
-    margin: 0 auto;
-}
-
-
-.formulario h1 {
-    text-align: center;
-    margin: 10px 0;
-}
-
-.formulario h1 span{
-    color: #09c3db;
-}
-
-input {
-    display: block;
-    margin: 10px 0;
+.container-cadastro__formulario input{
     width: 100%;
-    padding: 10px;
+    background-color: black;
     border: none;
     outline: none;
-    border-bottom: 1px solid #a7a7a7;
-    background-color: black;
-    color: white;
-}
-
-.cadastro__separar {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.cadastrar button {
+    border-bottom: 1px solid purple;
+    margin-bottom: 15px;
     padding: 10px;
-    border-radius: 5px 20px;
-    width: 130px;
-    border:none;
-    cursor: pointer;
-    background-color: #09c3db;
-    color: white
+
 }
 
-.cadastrar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
+.container-cadastro__formulario label{
+    color: black;
+    margin-bottom: 5px;
 }
 
-.cadastrar a {
-    color: white;
-    text-decoration: none;
-}
-
-.buttonRegister{
-    padding: 10px;
-    width: 70px;
+.container-cadastro__principal button{
+    width: 50%;
+    background-color: purple;
     border: none;
     color: white;
-    background-color: #09c3db;
-    border-radius: 5px 20px;
-    
-    cursor: pointer;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 50px;
     transition: 0.5s;
 }
 
-.buttonRegister:hover{
-    color: black;
-    background-color: #06afc5;
-    width: 50%;
+.container-cadastro__principal button:hover{
+    width: 100%;
+}
+
+.container-cadastro__decoracao {
+    border-radius: 0px 50px 50px 0px;
+    background-image: url(https://img.freepik.com/fotos-premium/bela-paisagem-fundo-ceu-nuvens-por-do-sol-pintura-a-oleo-vista-papel-de-parede-paisagem-cores-claras_705027-988.jpg);
+}
+
+#nomeVerificado {
+    display: none;
+}
+
+#emailVerificado {
+    display: none;
+}
+
+#telefoneVerificado {
+    display: none;
 }

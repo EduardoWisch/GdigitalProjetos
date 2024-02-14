@@ -1,6 +1,9 @@
 const button = document.getElementById('botaoDeCadastro')
+let name = document.getElementById('name')
+let email = document.getElementById('email')
+let phone = document.getElementById('telefone')
+
 function checkName(){
-    let name = document.getElementById('name')
     let checkedName = document.getElementById('nomeVerificado')
     if(name.value == ''){
         checkedName.style.display = 'block'
@@ -10,7 +13,6 @@ function checkName(){
 }
 
 function checkEmail(){
-    let email = document.getElementById('email')
     let checkedEmail = document.getElementById('emailVerificado')
     if(email.value == ''){
         checkedEmail.style.display = 'block'
@@ -20,7 +22,6 @@ function checkEmail(){
 }
 
 function checkPhone(){
-    let phone = document.getElementById('telefone')
     let checkedPhone = document.getElementById('telefoneVerificado')
     if(phone.value == ''){
         checkedPhone.style.display = 'block'
@@ -30,29 +31,24 @@ function checkPhone(){
 }
 
 function clear(){
-    let name = document.getElementById('name')
-    let email = document.getElementById('email')
-    let phone = document.getElementById('telefone')
     name.value = ''
     email.value = ''
     phone.value = ''
 
 }
 
+function checkAll(){
+    checkName()
+    checkEmail()
+    checkPhone()
+}
+
 function check(){
-    let name = document.getElementById('name')
-    let email = document.getElementById('email')
-    let phone = document.getElementById('telefone')
-    let modal = document.getElementById('modal')
     if( name.value == '' || email.value == '' || phone.value == ''){
-        checkName();
-        checkEmail();
-        checkPhone();
+        checkAll()
         return
     }
-        checkName();
-        checkEmail();
-        checkPhone()
-        alert(`Cadastro realizado com sucesso \nnome: ${name.value} \nE-mail: ${email.value} \nTelefone: ${phone.value}`)
-        clear()
+    checkAll()
+    alert(`Cadastro realizado com sucesso \nnome: ${name.value} \nE-mail: ${email.value} \nTelefone: ${phone.value}`)
+    clear()
 }

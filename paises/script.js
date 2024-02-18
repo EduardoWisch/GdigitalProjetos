@@ -10,22 +10,22 @@
 // })
 
 function list() {
-    fetch('https://restcountries.com/v3.1/all')
-        .then(json => json.json())
-        .then(countries => {
-            let row = document.querySelector("#row")
-            let countriesHtml = ""
-            for (let index = 0; index < countries.length; index++) {
-                const country = countries[index];
-                // console.log(country.translations.por.common)
+  fetch('https://restcountries.com/v3.1/all')
+    .then(json => json.json())
+    .then(countries => {
+      let row = document.querySelector("#row")
+      let countriesHtml = ""
+      for (let index = 0; index < countries.length; index++) {
+        const country = countries[index];
+        // console.log(country.translations.por.common)
 
-                //nome: country.translations.por.commo
-                //imagem: country.flags.png
-                //alt: country.flags.alt
-                //flag: country.flag
-                //regiao: country.region
+        //nome: country.translations.por.commo
+        //imagem: country.flags.png
+        //alt: country.flags.alt
+        //flag: country.flag
+        //regiao: country.region
 
-                countriesHtml += `
+        countriesHtml += `
                 <div class="col-4 mt-3">
                 <div class="card" style="width: 18rem;">
                     <img src="${country.flags.png}" class="card-img-top" alt="${country.flags.alt}">
@@ -36,11 +36,12 @@ function list() {
                       </p>
                     </div>
                   </div>
+                </div>
                 `
 
-            }
-            row.innerHTML = countriesHtml
-        })
+      }
+      row.innerHTML = countriesHtml
+    })
 }
 
 list()

@@ -1,44 +1,35 @@
 <template>
-  <TheHeader 
-    v-if="showHeader"
-  />
+  <h1>LOOPS</h1>
+  
+  <TheLoops />
 
-  <div v-show="showName">
-    Nome: {{ fisrtName }} <br>
-    Sobrenome: {{ lastName }}
-  </div>
+  <h1>SHOW AND IF</h1>
 
-  <div v-if="accessLevel === 'admin'">Usuário Admin</div>
-  <div v-else-if="accessLevel === 'marketing'">Usuário Marketing</div>
-  <div v-else>Usuário Normal</div>
+  <ShowAndIf />
 
-  <img 
-    alt="Vue logo" 
-    src="./assets/logo.png"
-  >
+  <h1>DATA BINDING</h1>
 
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <DataBinding />
+
+  <h1>CLASS AND STYLE</h1>
+
+  <ClassAndStyle />
 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TheHeader from './components/TheHeader.vue';
+import TheLoops from './components/TheLoops.vue';
+import ShowAndIf from './components/ShowAndIf.vue';
+import DataBinding from './components/DataBinding.vue';
+import ClassAndStyle from './components/ClassAndStyle.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    TheHeader
-  },
-  data() {
-    return {
-      showHeader: true,
-      fisrtName: 'Eduardo',
-      lastName: 'Wisch',
-      showName: false,
-      accessLevel:'marketing'
-    }
+    TheLoops,
+    ShowAndIf,
+    DataBinding,
+    ClassAndStyle
   }
 }
 </script>

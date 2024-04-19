@@ -4,23 +4,40 @@ export default {
     return {
       text: '',
       count: 0,
+      count2: 0,
+      firstArray: ['Maria', 'João', 'Richard', 'Eduardo']
+    }
+  },
+  methods: {
+    addStudent() {
+      if(this.firstArray.length >= 10){
+        return
+      }
+      this.firstArray.push(this.text)
+      this.text = ''
+    },
+    removeLastStudent() {
+      this.firstArray.pop()
+    },
+    removeStudent(index) {
+      this.firstArray.splice(index, 1)
+    }
+  },
+  created () {
+    this.firstArray.push('Manoela', 'a', 'b', 'c', 'd')
+  },
+  computed: {
+    sumCount() {
+      return this.count + this.count2
     }
   }
+
+
 }
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <button @click="count--">-</button>
-      <h1 :class="count > 10 ? 'greenn' : ''">{{ count }}</h1>
-      <button @click="count++">+</button>
-      <p v-if="count > 10">Parágrafo secreto</p>
-    </div>
-  </header>
-
+  
   <RouterView />
 </template>
 

@@ -32,11 +32,15 @@
                 axios.delete(`/product/${this.selectedProduct.id}`)
                 .then((response) => {
                     console.log(response)
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
-            }
+                        let itemIndex = this.products.findIndex(product => product.id === this.selectedProduct.id)
+                    if (itemIndex) {
+                        this.products.splice(itemIndex, 1)
+                    }
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+                }
         },
         components: {
             Modal,
@@ -66,7 +70,8 @@
 
 <div class="about">
   <h1>Teste</h1>
-  <button @click="showModal = true">Mostrar modal</button>
+  <button @click="selectedProduct = {}, showModal = true">Criar produto</button>
+    <button @click="showModal = true" :disabled="!selectedProduct.id">Editar produto</button>
   <button @click="deleteProduct()" >Deletar produto {{ selectedProduct.name }}</button>
 </div>
 </template>

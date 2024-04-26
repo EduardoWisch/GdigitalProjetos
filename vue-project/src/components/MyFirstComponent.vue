@@ -24,6 +24,16 @@ import axios from 'axios'
 
             }
         },
+        watch: {
+            shoeModal(newValue) {
+                if (newValue == true) {
+                    if (newValue == true && this.product) {
+                        this.productName = this.product.name
+                        this.productValue = this.product.amount
+                    }
+                }
+            }
+        },
         props: {
             modalTitle: {
                 type: String,
@@ -35,7 +45,7 @@ import axios from 'axios'
             },
             product: {
                 type: Object,
-                required: true, 
+                default: '',
             }
         },
         methods: {
@@ -55,7 +65,9 @@ import axios from 'axios'
                         .catch((error) => {
                         console.log(error)
                         })
-            }
+            },
+
+            
         },
     }
 </script>
